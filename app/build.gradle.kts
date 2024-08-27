@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.safe.args)
 }
 
 android {
@@ -46,12 +47,30 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
     implementation(libs.recyclerview)
+
     implementation(libs.glide)
     ksp(libs.glide.ksp)
+
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
-    
+
+    implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
+
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.moshi)
+    implementation(libs.moshi)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+
+    implementation(libs.coroutines.android)
+    implementation(libs.retrofit.coroutines.adapter)
 
 
 }
+
+
+
